@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/info/static/css/main.823a8385.css",
-    "main.js": "/info/static/js/main.5f13aef6.js",
+    "main.css": "/info/static/css/main.61dfbd99.css",
+    "main.js": "/info/static/js/main.d58adc9d.js",
     "static/js/787.676fbc64.chunk.js": "/info/static/js/787.676fbc64.chunk.js",
     "static/media/FuturaPT-Demi.woff2": "/info/static/media/FuturaPT-Demi.9427520fbb37a99905ea.woff2",
     "static/media/FuturaPT-Heavy.woff2": "/info/static/media/FuturaPT-Heavy.1439b8f91a2fa4eab1f2.woff2",
@@ -9,12 +9,12 @@
     "static/media/Muli-italic.woff2": "/info/static/media/Muli-italic.494e1faa07d56c36643d.woff2",
     "static/media/Muli-regular.woff2": "/info/static/media/Muli-regular.4922c23a53233c77a9c7.woff2",
     "index.html": "/info/index.html",
-    "main.823a8385.css.map": "/info/static/css/main.823a8385.css.map",
-    "main.5f13aef6.js.map": "/info/static/js/main.5f13aef6.js.map",
+    "main.61dfbd99.css.map": "/info/static/css/main.61dfbd99.css.map",
+    "main.d58adc9d.js.map": "/info/static/js/main.d58adc9d.js.map",
     "787.676fbc64.chunk.js.map": "/info/static/js/787.676fbc64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.823a8385.css",
-    "static/js/main.5f13aef6.js"
+    "static/css/main.61dfbd99.css",
+    "static/js/main.d58adc9d.js"
   ]
 }
