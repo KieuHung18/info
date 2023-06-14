@@ -12,8 +12,8 @@ const SideBar = (props: {
   const linkList: { title: string; path: string }[] = [
     { title: "Home", path: "/" },
     { title: "About Me", path: "/about-me" },
-    { title: "Artwork", path: "/artwork" },
-    { title: "Project", path: "/project" },
+    { title: "Project", path: "/projects" },
+    { title: "Artwork", path: "/artworks" },
     { title: "Components Demo", path: "/components-demo" },
   ];
   const [hidden, setHidden] = useState(true);

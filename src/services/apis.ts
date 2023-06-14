@@ -1,16 +1,25 @@
 import { backendRequest } from "./request";
-const USER_EMAIL = "kieuhungcm2015@gmail.com";
 export default {
   apps: {},
   users: {
-    retrieve(email = USER_EMAIL) {
-      const path = `/users/${email}`;
+    retrieve() {
+      const path = `/users`;
       return backendRequest("GET", path);
     },
   },
   artworks: {
-    list(email = USER_EMAIL) {
-      const path = `/artworks/${email}`;
+    list() {
+      const path = `/artworks`;
+      return backendRequest("GET", path);
+    },
+  },
+  projects: {
+    get(projectId: string) {
+      const path = `/projects/${projectId}`;
+      return backendRequest("GET", path);
+    },
+    list() {
+      const path = `/projects`;
       return backendRequest("GET", path);
     },
   },

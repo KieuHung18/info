@@ -3,10 +3,10 @@ import PageSeperator from "../../components/icons/page separator";
 import Button from "../../components/common/button";
 import { useEffect, useState } from "react";
 import apis from "../../services/apis";
-import { User } from "../../services/model.types";
+import { UserProps } from "../../services/model.types";
 
 const Home = () => {
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<UserProps>();
   const getUser = async () => {
     const [fetchData, error] = await apis.users.retrieve();
     if (!error) {

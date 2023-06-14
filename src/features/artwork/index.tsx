@@ -6,13 +6,14 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 import PageSeperator from "../../components/icons/page separator";
 import Pagination from "../../components/common/pagination";
-import { Artwork } from "../../services/model.types";
+import { ArtworkProps } from "../../services/model.types";
 import apis from "../../services/apis";
+import { ITEMS_PER_PAGE } from "../constant ";
+
 const Artworks = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [detailArtUrl, setDetailArtUrl] = useState("");
-  const [artworks, setArtworks] = useState<Artwork[]>([]);
-  const ITEMS_PER_PAGE = 6;
+  const [artworks, setArtworks] = useState<ArtworkProps[]>([]);
   const arts = artworks
     .slice(
       currentPage * ITEMS_PER_PAGE,
@@ -24,7 +25,7 @@ const Artworks = () => {
           <ArtworkCard
             artwork={artwork}
             handleShowDetail={() => {
-              setDetailArtUrl(artwork.url);
+              setDetailArtUrl(artwork.image.url);
             }}
           />
         </div>
@@ -36,7 +37,8 @@ const Artworks = () => {
       alert(error.message);
     } else {
       const featureFirst = fetchData.sort(
-        (a: Artwork, b: Artwork) => Number(b.feature) - Number(a.feature)
+        (a: ArtworkProps, b: ArtworkProps) =>
+          Number(b.feature) - Number(a.feature)
       );
       setArtworks(featureFirst);
     }
@@ -88,16 +90,16 @@ const Button = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
 };
 
 const ArtworkCard = (props: {
-  artwork: Artwork;
+  artwork: ArtworkProps;
   handleShowDetail: (url: string) => void;
 }) => {
   const handleShowDetail = () => {
-    props.handleShowDetail(props.artwork.url);
+    props.handleShowDetail(props.artwork.image.url);
   };
   return (
     <div
       style={{
-        backgroundImage: `url(${props.artwork.url})`,
+        backgroundImage: `url(${props.artwork.image.url})`,
       }}
       className="bg-cover flex h-full group"
     >

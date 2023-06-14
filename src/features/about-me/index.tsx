@@ -2,10 +2,10 @@ import React from "react";
 import Button from "../../components/common/button";
 import apis from "../../services/apis";
 import { useEffect, useState } from "react";
-import { User } from "../../services/model.types";
+import { UserProps } from "../../services/model.types";
 
 const AboutMe = () => {
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<UserProps>();
   const getUser = async () => {
     const [fetchData, error] = await apis.users.retrieve();
     if (!error) {
@@ -22,13 +22,15 @@ const AboutMe = () => {
       <div className="responsive-container">
         <div className="grid lg:grid-flow-col">
           <div className="mb-10 px-4">
-            <img src={user?.profileUrl}></img>
+            <img src={user?.profile?.url}></img>
           </div>
           <div className="px-4 pb-16 2xl:p-16">
             <h2 className="text-[35px] xl:text[40px] 2xl:text-[50px] font-light leading-[60px] my-9">
               {user?.aboutMe}
             </h2>
-            <p className="mb-4">{user?.description}</p>
+            <p style={{ whiteSpace: "pre-line" }} className="mb-4">
+              {user?.description}
+            </p>
             <span className="font-mrsSaint text-[90px] lowercase">
               {user?.lastName}
             </span>
