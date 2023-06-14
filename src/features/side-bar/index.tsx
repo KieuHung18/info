@@ -14,7 +14,8 @@ const SideBar = (props: {
     { title: "About Me", path: "/about-me" },
     { title: "Project", path: "/projects" },
     { title: "Artwork", path: "/artworks" },
-    { title: "Components Demo", path: "/components-demo" },
+    { title: "Contact", path: "/contact" },
+    // { title: "Components Demo", path: "/components-demo" },
   ];
   const [hidden, setHidden] = useState(true);
   window.addEventListener("resize", () => {

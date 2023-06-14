@@ -22,6 +22,7 @@ module.exports = {
       muli: ["Muli", "sans-serif"],
       futura: ["Futura", "sans-serif"],
       mrsSaint: ["MrsSaintDelafield", "sans-serif"],
+      creattion: ["CreattionDemo", "sans-serif"],
     },
     extend: {},
   },

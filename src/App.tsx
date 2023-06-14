@@ -10,6 +10,7 @@ import AboutMe from "./features/about-me";
 import Artwork from "./features/artwork";
 import Project from "./features/project";
 import ProjectDetail from "./features/project-detail";
+import Contact from "./features/contact";
 
 function App() {
   const [transition, setTransition] = useState("");
@@ -19,7 +20,8 @@ function App() {
     { path: "/projects", component: <Project /> },
     { path: "/projects/:id", component: <ProjectDetail /> },
     { path: "/artworks", component: <Artwork /> },
-    { path: "/components-demo", component: <ComponentsDemo /> },
+    { path: "/contact", component: <Contact /> },
+    // { path: "/components-demo", component: <ComponentsDemo /> },
     { path: "/*", component: <NotFound /> },
   ];
 

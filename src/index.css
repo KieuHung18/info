@@ -35,7 +35,10 @@
   src: url("../src/assets/fonts/MrsSaintDelafield-Regular.ttf")
     format("truetype");
 }
-
+@font-face {
+  font-family: "CreattionDemo";
+  src: url("../src/assets/fonts/Creattion-Demo.woff2") format("truetype");
+}
 @layer base {
   body {
     @apply overflow-x-hidden;

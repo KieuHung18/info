@@ -4,9 +4,11 @@ import Button from "../../components/common/button";
 import { useEffect, useState } from "react";
 import apis from "../../services/apis";
 import { UserProps } from "../../services/model.types";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [user, setUser] = useState<UserProps>();
+  const navigate = useNavigate();
   const getUser = async () => {
     const [fetchData, error] = await apis.users.retrieve();
     if (!error) {
@@ -29,7 +31,14 @@ const Home = () => {
             {user?.intro}
           </h2>
           <div className="w-44 flex">
-            <Button variant="secondary">Contact Me</Button>
+            <Button
+              onClick={() => {
+                navigate("/contact");
+              }}
+              variant="secondary"
+            >
+              Contact Me
+            </Button>
           </div>
         </div>
       </div>

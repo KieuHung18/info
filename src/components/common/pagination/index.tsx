@@ -18,7 +18,11 @@ const Pagination = (props: PagenationProps) => {
   const MAX_NAVIGATION = 3;
 
   return (
-    <div className="font-muli text-[13px] mx-auto w-fit mt-11 md:mt-16">
+    <div
+      className={clsx("font-muli text-[13px] mx-auto w-fit mt-11 md:mt-16", {
+        hidden: props.numberOfPages === 1,
+      })}
+    >
       <button
         className="pr-3"
         onClick={() => {
