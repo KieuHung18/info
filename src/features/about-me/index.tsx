@@ -74,11 +74,8 @@ const MoreAboutModal = (props: { userMetadata: UserMetadata[] }) => {
               {sectionItem.experience && (
                 <div className="bg-primary-15 w-full p-2 rounded-full">
                   <div
-                    className={
-                      "bg-primary-20 rounded-full h-2 w-[" +
-                      sectionItem.experience +
-                      "%]"
-                    }
+                    style={{ width: `${sectionItem.experience}%` }}
+                    className="bg-primary-20 rounded-full h-2"
                   ></div>
                 </div>
               )}
