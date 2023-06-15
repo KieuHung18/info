@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/info/static/css/main.09dbde8f.css",
-    "main.js": "/info/static/js/main.ec894711.js",
+    "main.css": "/info/static/css/main.39712166.css",
+    "main.js": "/info/static/js/main.3b401147.js",
     "static/js/787.676fbc64.chunk.js": "/info/static/js/787.676fbc64.chunk.js",
     "static/media/MrsSaintDelafield-Regular.ttf": "/info/static/media/MrsSaintDelafield-Regular.5bf734a989314fb09a30.ttf",
     "static/media/Creattion-Demo.woff2": "/info/static/media/Creattion-Demo.fac8f063ee598d49bc31.woff2",
@@ -11,12 +11,12 @@
     "static/media/Muli-italic.woff2": "/info/static/media/Muli-italic.494e1faa07d56c36643d.woff2",
     "static/media/Muli-regular.woff2": "/info/static/media/Muli-regular.4922c23a53233c77a9c7.woff2",
     "index.html": "/info/index.html",
-    "main.09dbde8f.css.map": "/info/static/css/main.09dbde8f.css.map",
-    "main.ec894711.js.map": "/info/static/js/main.ec894711.js.map",
+    "main.39712166.css.map": "/info/static/css/main.39712166.css.map",
+    "main.3b401147.js.map": "/info/static/js/main.3b401147.js.map",
     "787.676fbc64.chunk.js.map": "/info/static/js/787.676fbc64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09dbde8f.css",
-    "static/js/main.ec894711.js"
+    "static/css/main.39712166.css",
+    "static/js/main.3b401147.js"
   ]
 }
