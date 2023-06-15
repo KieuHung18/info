@@ -24,7 +24,7 @@ const AboutMe = () => {
     <div className="page-container bg-primary-10">
       <div className="responsive-container pb-10">
         <div className="grid lg:grid-flow-col">
-          <div className="mb-10 px-4 ">
+          <div className="pt-2 px-4 m-auto">
             <img src={user?.profile?.url}></img>
           </div>
           <div className="px-4 pb-16 2xl:p-16">

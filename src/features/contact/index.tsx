@@ -33,7 +33,7 @@ const Contact = () => {
   ];
   const contactCards = contactItems.map((item, i) => {
     return (
-      <div className="p-10 items-center text-center bg-primary-10 mx-4" key={i}>
+      <div className="p-10 items-center text-center bg-primary-10 m-4" key={i}>
         <div className="rounded-full bg-primary-5 w-20 h-20 flex mx-auto">
           <FontAwesomeIcon
             className="m-auto"
@@ -54,7 +54,7 @@ const Contact = () => {
           <span className="page-title">Contact</span>
           <h2 className="page-sub-title">Contact Me</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row h-fit">
+        <div className="grid grid-cols-1 lg:grid-cols-3 grid-flow-row h-fit">
           {contactCards}
         </div>
       </div>
