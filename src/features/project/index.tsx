@@ -6,6 +6,7 @@ import Pagination from "../../components/common/pagination";
 import Button from "../../components/common/button";
 import { useNavigate } from "react-router-dom";
 import apis from "../../services/apis";
+import { sortFetureFirst } from "../../utils/sortFeatureFirst";
 
 const Project = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -28,7 +29,8 @@ const Project = () => {
     if (error) {
       alert(error.message);
     } else {
-      setprojects(fetchData);
+      const featureFirst = sortFetureFirst(fetchData);
+      setprojects(featureFirst);
     }
   };
   useEffect(() => {

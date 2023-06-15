@@ -9,6 +9,7 @@ import Pagination from "../../components/common/pagination";
 import { ArtworkProps } from "../../services/model.types";
 import apis from "../../services/apis";
 import { ITEMS_PER_PAGE } from "../constant ";
+import { sortFetureFirst } from "../../utils/sortFeatureFirst";
 
 const Artworks = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -36,10 +37,7 @@ const Artworks = () => {
     if (error) {
       alert(error.message);
     } else {
-      const featureFirst = fetchData.sort(
-        (a: ArtworkProps, b: ArtworkProps) =>
-          Number(b.feature) - Number(a.feature)
-      );
+      const featureFirst = sortFetureFirst(fetchData);
       setArtworks(featureFirst);
     }
   };
