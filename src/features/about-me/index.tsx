@@ -65,23 +65,25 @@ const AboutMe = () => {
 const MoreAboutModal = (props: { userMetadata: UserMetadata[] }) => {
   const moreAbout = props.userMetadata.map((metadata, i) => {
     return (
-      <div key={"user-metadata-" + i} className="w-[220px] mb-1">
+      <div key={"user-metadata-" + i} className="mb-1 mt-4">
         <h4>{metadata.section}</h4>
-        {metadata.sectionItems?.map((sectionItem, i) => {
-          return (
-            <div key={"section-item-" + i} className="ml-8">
-              {sectionItem.name}
-              {sectionItem.experience && (
-                <div className="bg-primary-15 w-full p-2 rounded-full">
-                  <div
-                    style={{ width: `${sectionItem.experience}%` }}
-                    className="bg-primary-20 rounded-full h-2"
-                  ></div>
-                </div>
-              )}
-            </div>
-          );
-        })}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-flow-row">
+          {metadata.sectionItems?.map((sectionItem, i) => {
+            return (
+              <div key={"section-item-" + i} className="ml-8 w-[220px]">
+                <div className="mt-2 ml-1">{sectionItem.name}</div>
+                {sectionItem.experience && (
+                  <div className="bg-primary-15 w-full p-2 rounded-full mt-1">
+                    <div
+                      style={{ width: `${sectionItem.experience}%` }}
+                      className="bg-primary-20 rounded-full h-2"
+                    ></div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   });
@@ -104,9 +106,7 @@ const MoreAboutModal = (props: { userMetadata: UserMetadata[] }) => {
           >
             <FontAwesomeIcon size="lg" icon={faClose} />
           </button>
-          <div className="bg-primary-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-flow-row h-fit p-7">
-            {moreAbout}
-          </div>
+          <div className="bg-primary-10 h-fit p-7">{moreAbout}</div>
         </div>
       </div>
     </>

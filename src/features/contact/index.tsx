@@ -49,7 +49,7 @@ const Contact = () => {
 
   return (
     <div className="page-container bg-primary-5">
-      <div className="responsive-container block pt-16 pb-56 md:pb-64">
+      <div className="responsive-container block pt-16 pb-10">
         <div className="title-section">
           <span className="page-title">Contact</span>
           <h2 className="page-sub-title">Contact Me</h2>

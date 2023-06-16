@@ -41,7 +41,7 @@ const Project = () => {
   };
   return (
     <div className="page-container bg-primary-5 md:pb-16">
-      <div className="responsive-container block pt-16 pb-56 md:pb-64">
+      <div className="responsive-container block pt-16 pb-10">
         <div className="title-section">
           <span className="page-title">Project</span>
           <h2 className="page-sub-title">My Project</h2>
@@ -64,12 +64,16 @@ const ProjectCard = (props: { project: ProjectProps }) => {
     navigate("/projects/" + props.project.id);
   };
   return (
-    <div className="bg-primary-7 p-10">
-      <h2 className="text-[28px] mt-7 mb-5">{props.project.name}</h2>
-      <p className="mb-4">{props.project.description}</p>
-      <Button onClick={handleOnclick} size="small">
-        Read More
-      </Button>
+    <div className="bg-primary-7 p-10 h-full">
+      <div className="h-fit">
+        <h2 className="text-[28px] mt-7 mb-5">{props.project.name}</h2>
+        <p className="mb-4">{props.project.description}</p>
+      </div>
+      <div>
+        <Button className="mt-auto" onClick={handleOnclick} size="small">
+          Read More
+        </Button>
+      </div>
     </div>
   );
 };
